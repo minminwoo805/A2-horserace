@@ -34,7 +34,7 @@ class Horse :
 
 def main() :
     win = GraphWin("Horse Race", 700, 350, autoflush=False)
-    # set background to see finish line correctly
+    # set background to see finish line clearly
     win.setBackground('white')
 
     img1 = Image(Point(0,0), "elephant.gif")
@@ -78,10 +78,10 @@ def main() :
         if horse3. crossed_finish_line(600):
             winners.append("Horse3")
 
+        win.update()
+        # winners can be one or two or three
         if len(winners) >= 1 :
             break
-
-        win.update()
 
     if len(winners) == 1 :
         print(f"{winners[0]} is the winner ")
@@ -96,6 +96,7 @@ def main() :
 
 
     win.update()
+    #click window to close
     win.getMouse()
     win.close()
 
