@@ -21,12 +21,11 @@ class Horse :
         self.image.draw_at_pos(self.window, self.x,  self.y)
 
     def crossed_finish_line(self, finish_line):
-        # if location x cross the finish line it is false so return false to stop
-       if self.x < finish_line :
-           return False
+       if self.x >= finish_line :
+           return True
 
        else :
-           return True
+           return False
 
 
 
