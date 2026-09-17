@@ -6,22 +6,22 @@ from Dice import *
 
 class Horse :
     def __init__(self, speed, y , image , window):
-        self.x =  40
-        self.y = y # x , y 그림의 끝 좌표에 두기
+        self.x_pos =  40
+        self.y_pos = y # x , y 그림의 끝 좌표에 두기
         self.image = image
         self.window = window
         self.dice = Dice(speed)
 
     def move(self):
         # move each horse randomly
-        self.x += self.dice.roll()
+        self.x_pos += self.dice.roll()
 
     def draw(self):
         # draw it
-        self.image.draw_at_pos(self.window, self.x,  self.y)
+        self.image.draw_at_pos(self.window, self.x_pos,  self.y_pos)
 
     def crossed_finish_line(self, finish_line):
-       if self.x >= finish_line :
+       if self.x_pos >= finish_line :
            return True
 
        else :
