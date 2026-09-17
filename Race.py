@@ -62,12 +62,12 @@ def main() :
         Finishline = Line(Point(600, 400), Point(600, -300))
         Finishline.draw(win)
 
-        Horse.move(horse1)
-        Horse.draw(horse1)
-        Horse.move(horse2)
-        Horse.draw(horse2)
-        Horse.move(horse3)
-        Horse.draw(horse3)
+        horse1.move()
+        horse1.draw()
+        horse2.move()
+        horse2.draw()
+        horse3.move()
+        horse3.draw()
 
         if horse1.crossed_finish_line(600):
             winners.append("Horse1")
