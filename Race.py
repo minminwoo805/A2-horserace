@@ -21,6 +21,7 @@ class Horse :
         self.image.draw_at_pos(self.window, self.x_pos,  self.y_pos)
 
     def crossed_finish_line(self, finish_line):
+        # when x position pass finish line it stops
        if self.x_pos >= finish_line :
            return True
 
@@ -33,6 +34,7 @@ class Horse :
 
 def main() :
     win = GraphWin("Horse Race", 700, 350, autoflush=False)
+    # set background to see finish line correctly
     win.setBackground('white')
 
     img1 = Image(Point(0,0), "elephant.gif")
@@ -47,9 +49,11 @@ def main() :
     horse3 = Horse(6, 150,img3,win)
     horse3.draw()
 
+    # make finish line before mouse click and after mouth click to show line always
     Finishline = Line(Point(600, 400), Point(600, -300))
     Finishline.draw(win)
 
+    # make empty list to know winners more easily
     winners = []
     win.getMouse()
     while True:
@@ -78,11 +82,15 @@ def main() :
             break
 
         win.update()
+
     if len(winners) == 1 :
         print(f"{winners[0]} is the winner ")
 
     elif len(winners) == 2 :
         print(f"Tie {winners[0]} with {winners[1]} ")
+
+    elif len(winners) == 3 :
+        print(f"Tie {winners[0]} with {winners[1]} with {winners[2]} ")
 
 
 
