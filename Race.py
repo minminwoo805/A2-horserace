@@ -6,7 +6,7 @@ from Dice import *
 
 class Horse :
     def __init__(self, speed, y , image , window):
-        self.x_pos =  40
+        self.x_pos =  0
         self.y_pos = y # x , y 그림의 끝 좌표에 두기
         self.image = image
         self.window = window
