@@ -69,6 +69,7 @@ def main() :
         horse3.move()
         horse3.draw()
 
+        # add winner in empty list
         if horse1.crossed_finish_line(600):
             winners.append("Horse1")
 
