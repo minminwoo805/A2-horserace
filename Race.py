@@ -42,11 +42,11 @@ def main() :
     horse1.draw()
 
     img2 = Image(Point(0,0),"Lion.gif")
-    horse2 = Horse(6, 250,img2,win)
+    horse2 = Horse(6, 150,img2,win)
     horse2.draw()
 
     img3 = Image(Point(0,0),"zebra.gif")
-    horse3 = Horse(6, 150,img3,win)
+    horse3 = Horse(6, 250,img3,win)
     horse3.draw()
 
     # make finish line before mouse click and after mouth click to show line always
@@ -59,7 +59,6 @@ def main() :
     while True:
         win.clear_win()
 
-        Finishline = Line(Point(600, 400), Point(600, -300))
         Finishline.draw(win)
 
         horse1.move()
@@ -95,8 +94,6 @@ def main() :
 
 
 
-
-    win.update()
     #click window to close
     win.getMouse()
     win.close()
